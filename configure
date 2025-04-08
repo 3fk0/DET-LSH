@@ -3734,13 +3734,13 @@ if test $ac_test_CXXFLAGS; then
   CXXFLAGS=$ac_save_CXXFLAGS
 elif test $ac_cv_prog_cxx_g = yes; then
   if test "$GXX" = yes; then
-    CXXFLAGS="-g -O3"
+    CXXFLAGS="-g -O2"
   else
     CXXFLAGS="-g"
   fi
 else
   if test "$GXX" = yes; then
-    CXXFLAGS="-O3"
+    CXXFLAGS="-O2"
   else
     CXXFLAGS=
   fi
@@ -3750,11 +3750,11 @@ if test x$ac_prog_cxx_stdcxx = xno
 then :
   { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for $CXX option to enable C++11 features" >&5
 printf %s "checking for $CXX option to enable C++11 features... " >&6; }
-if test ${ac_cv_prog_cxx_11+y}
+if test ${ac_cv_prog_cxx_cxx11+y}
 then :
   printf %s "(cached) " >&6
 else $as_nop
-  ac_cv_prog_cxx_11=no
+  ac_cv_prog_cxx_cxx11=no
 ac_save_CXX=$CXX
 cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
@@ -3796,11 +3796,11 @@ if test x$ac_prog_cxx_stdcxx = xno
 then :
   { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for $CXX option to enable C++98 features" >&5
 printf %s "checking for $CXX option to enable C++98 features... " >&6; }
-if test ${ac_cv_prog_cxx_98+y}
+if test ${ac_cv_prog_cxx_cxx98+y}
 then :
   printf %s "(cached) " >&6
 else $as_nop
-  ac_cv_prog_cxx_98=no
+  ac_cv_prog_cxx_cxx98=no
 ac_save_CXX=$CXX
 cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
@@ -4621,13 +4621,13 @@ if test $ac_test_CFLAGS; then
   CFLAGS=$ac_save_CFLAGS
 elif test $ac_cv_prog_cc_g = yes; then
   if test "$GCC" = yes; then
-    CFLAGS="-g -O3"
+    CFLAGS="-g -O2"
   else
     CFLAGS="-g"
   fi
 else
   if test "$GCC" = yes; then
-    CFLAGS="-O3"
+    CFLAGS="-O2"
   else
     CFLAGS=
   fi
@@ -5184,6 +5184,9 @@ printf "%s\n" "#define VERBOSE 0" >>confdefs.h
 
 fi
 
+# Add AVX/AVX2 support
+CXXFLAGS="$CXXFLAGS -mavx -mavx2 -mavx512f -mavx512dq -mavx512bw -msse3"
+CFLAGS="$CFLAGS -mavx -mavx2 -mavx512f -mavx512dq -mavx512bw -msse3"
 
 	ac_config_files="$ac_config_files Makefile"
 

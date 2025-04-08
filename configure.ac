@@ -45,6 +45,9 @@ else
 	AC_DEFINE(VERBOSE, [0], [Disable verbose output])
 fi
 
+# Add AVX/AVX2 support
+CXXFLAGS="$CXXFLAGS -mavx -mavx2 -mavx512f -mavx512dq -mavx512bw -msse3"
+CFLAGS="$CFLAGS -mavx -mavx2 -mavx512f -mavx512dq -mavx512bw -msse3"
 
 	AC_CONFIG_FILES([Makefile])
 	AC_OUTPUT

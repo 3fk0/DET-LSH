@@ -7,7 +7,7 @@ lib_libutils_a_CFLAGS =-I/opt/local/include -Iinclude/ -march=native -mavx -mavx
 
 bin_PROGRAMS = bin/DETLSH
 bin_DETLSH_SOURCES = src/main/DETLSH.cpp
-bin_DETLSH_CXXFLAGS = -I/opt/local/include -Iinclude/ -I/usr/local/include/ -march=native -fopenmp
+bin_DETLSH_CXXFLAGS = -I/opt/local/include -Iinclude/ -I/usr/local/include/ -march=native -mavx -mavx2 -mavx512f -mavx512dq -mavx512bw -fopenmp
 bin_DETLSH_LDADD = -lm -lreadline -lutils -lpthread
 bin_DETLSH_LDFLAGS = -L/opt/local/lib -Llib/  -march=native -mavx -mavx2 -msse3
 

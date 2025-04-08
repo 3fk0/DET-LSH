@@ -264,22 +264,22 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} '/home/jiuqi/DET-LSH/missing' aclocal-1.16
+ACLOCAL = ${SHELL} '/home/fko/Desktop/School/FI_MINI_2025_I/SBAPR/index-comparison/indices/DET-LSH/missing' aclocal-1.16
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
-AUTOCONF = ${SHELL} '/home/jiuqi/DET-LSH/missing' autoconf
-AUTOHEADER = ${SHELL} '/home/jiuqi/DET-LSH/missing' autoheader
-AUTOMAKE = ${SHELL} '/home/jiuqi/DET-LSH/missing' automake-1.16
+AUTOCONF = ${SHELL} '/home/fko/Desktop/School/FI_MINI_2025_I/SBAPR/index-comparison/indices/DET-LSH/missing' autoconf
+AUTOHEADER = ${SHELL} '/home/fko/Desktop/School/FI_MINI_2025_I/SBAPR/index-comparison/indices/DET-LSH/missing' autoheader
+AUTOMAKE = ${SHELL} '/home/fko/Desktop/School/FI_MINI_2025_I/SBAPR/index-comparison/indices/DET-LSH/missing' automake-1.16
 AWK = mawk
-CC = gcc
+CC = /home/fko/miniconda3/envs/gcc9_env/bin/x86_64-conda-linux-gnu-cc
 CCDEPMODE = depmode=gcc3
-CFLAGS = -g -O3
-CPPFLAGS = 
+CFLAGS = -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/fko/miniconda3/envs/gcc9_env/include -mavx -mavx2 -mavx512f -mavx512dq -mavx512bw -msse3
+CPPFLAGS = -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /home/fko/miniconda3/envs/gcc9_env/include
 CSCOPE = cscope
 CTAGS = ctags
-CXX = g++
+CXX = /home/fko/miniconda3/envs/gcc9_env/bin/x86_64-conda-linux-gnu-c++
 CXXDEPMODE = depmode=gcc3
-CXXFLAGS = -g -O3
+CXXFLAGS = -fvisibility-inlines-hidden -std=c++17 -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/fko/miniconda3/envs/gcc9_env/include -mavx -mavx2 -mavx512f -mavx512dq -mavx512bw -msse3
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
@@ -293,11 +293,11 @@ INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-LDFLAGS = 
+LDFLAGS = -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/home/fko/miniconda3/envs/gcc9_env/lib -Wl,-rpath-link,/home/fko/miniconda3/envs/gcc9_env/lib -L/home/fko/miniconda3/envs/gcc9_env/lib
 LIBOBJS = 
 LIBS = 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} '/home/jiuqi/DET-LSH/missing' makeinfo
+MAKEINFO = ${SHELL} '/home/fko/Desktop/School/FI_MINI_2025_I/SBAPR/index-comparison/indices/DET-LSH/missing' makeinfo
 MKDIR_P = /usr/bin/mkdir -p
 OBJEXT = o
 PACKAGE = libutils
@@ -308,35 +308,35 @@ PACKAGE_TARNAME = libutils
 PACKAGE_URL = 
 PACKAGE_VERSION = 1.0
 PATH_SEPARATOR = :
-RANLIB = ranlib
+RANLIB = /home/fko/miniconda3/envs/gcc9_env/bin/x86_64-conda-linux-gnu-ranlib
 SET_MAKE = 
 SHELL = /bin/bash
-STRIP = 
+STRIP = /home/fko/miniconda3/envs/gcc9_env/bin/x86_64-conda-linux-gnu-strip
 VERSION = 1.0
-abs_builddir = /home/jiuqi/DET-LSH
-abs_srcdir = /home/jiuqi/DET-LSH
-abs_top_builddir = /home/jiuqi/DET-LSH
-abs_top_srcdir = /home/jiuqi/DET-LSH
-ac_ct_CC = gcc
-ac_ct_CXX = g++
+abs_builddir = /home/fko/Desktop/School/FI_MINI_2025_I/SBAPR/index-comparison/indices/DET-LSH
+abs_srcdir = /home/fko/Desktop/School/FI_MINI_2025_I/SBAPR/index-comparison/indices/DET-LSH
+abs_top_builddir = /home/fko/Desktop/School/FI_MINI_2025_I/SBAPR/index-comparison/indices/DET-LSH
+abs_top_srcdir = /home/fko/Desktop/School/FI_MINI_2025_I/SBAPR/index-comparison/indices/DET-LSH
+ac_ct_CC = 
+ac_ct_CXX = 
 am__include = include
 am__leading_dot = .
 am__quote = 
 am__tar = $${TAR-tar} chof - "$$tardir"
 am__untar = $${TAR-tar} xf -
 bindir = ${exec_prefix}/bin
-build_alias = 
+build_alias = x86_64-conda-linux-gnu
 builddir = .
 datadir = ${datarootdir}
 datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host_alias = 
+host_alias = x86_64-conda-linux-gnu
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/jiuqi/DET-LSH/install-sh
+install_sh = ${SHELL} /home/fko/Desktop/School/FI_MINI_2025_I/SBAPR/index-comparison/indices/DET-LSH/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -363,7 +363,7 @@ lib_LIBRARIES = lib/libutils.a
 lib_libutils_a_SOURCES = src/utils/isax/isax_first_buffer_layer.c src/utils/isax/isax_index.c src/utils/isax/isax_node.c src/utils/isax/isax_node_buffer.c src/utils/isax/isax_node_record.c src/utils/isax/isax_node_split.c src/utils/isax/pqueue.c src/utils/sax/sax.c src/utils/sax/ts.c src/utils/query_support.c src/utils/indexing_support.c src/utils/encoding_support.c
 lib_libutils_a_CFLAGS = -I/opt/local/include -Iinclude/ -march=native -mavx -mavx2 -msse3 -fopenmp
 bin_DETLSH_SOURCES = src/main/DETLSH.cpp
-bin_DETLSH_CXXFLAGS = -I/opt/local/include -Iinclude/ -I/usr/local/include/ -march=native -fopenmp
+bin_DETLSH_CXXFLAGS = -I/opt/local/include -Iinclude/ -I/usr/local/include/ -march=native -mavx -mavx2 -mavx512f -mavx512dq -mavx512bw -fopenmp
 bin_DETLSH_LDADD = -lm -lreadline -lutils -lpthread
 bin_DETLSH_LDFLAGS = -L/opt/local/lib -Llib/  -march=native -mavx -mavx2 -msse3
 all: config.h
